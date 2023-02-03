@@ -1,0 +1,66 @@
+class:
+  num: 2
+  name: 
+    - Anime
+    - Reality
+
+modelname: efficientnetv2s
+image_size: [224, 224]
+load_checkpoint: ./weights/efficientnetv2s_best.pth
+
+log:
+  path: ./logs/
+  name: train.log
+  mode: w # a or w
+
+confusion_matrix: 
+  name: confusion_matrix.jpg 
+
+
+train:
+  path: ./data/train/
+  epoch: 10
+  batch_size: 32
+  num_workers: 4
+  smooth: 0.9 # Apply smoothing label
+  optimizer: Adam
+  learning_rate: !!float 1e-7
+  loss_fn: CE
+  model_savepath: ./weights/
+  
+
+valid:
+  path: ./data/valid/
+  batch_size: 16
+  num_workers: 4
+
+test:
+  path: /home/teamai/TeamAI/dongtrinh/Anime-vs-Reality-Classification/data/valid/Reality/370.png
+  result_path: ./results
+
+MODEL_AVAILABLE: [
+  custom, 
+  efficientnetv2s,
+  mobilenetv3s,
+  regnetx800mf, regnetx8gf,
+  resnet18, resnet50, resnet152,
+  squeezenet1_1
+]
+
+OPTIMIZER_AVAILABLE:
+  - Adam
+
+LOSS_AVAILABLE:
+  - custom
+  - CE
+
+
+
+
+
+
+
+
+
+
+

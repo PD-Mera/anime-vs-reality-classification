@@ -5,7 +5,6 @@ import torch
 from torch.utils.data import DataLoader
 
 from data import LoadDataset
-from config import *
 from model import init_model
 from optimizer import init_optimizer
 from loss import init_loss

@@ -3,7 +3,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchvision.models import *
 
-from config import *
 
 
 class ClsfModel(nn.Module):

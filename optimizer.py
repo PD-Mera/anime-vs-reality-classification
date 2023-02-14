@@ -1,7 +1,5 @@
 import torch
 
-from config import *
-
 
 class ClsfLoss():
     def __init__(self):

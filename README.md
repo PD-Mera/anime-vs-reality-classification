@@ -1,4 +1,4 @@
-# NSFW Anime Arts Classification
+# Anime vs Reality Classification
 
 This project simply classifies whether image is **Anime** or **Reality**
 

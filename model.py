@@ -45,7 +45,7 @@ def init_model(config):
 
         model = nn.Sequential(
             backbone,
-            nn.Linear(1000, CLASS_INFO['num']),
+            nn.Linear(1000, config['class']['num']),
             nn.Softmax(dim=1)
         )
     

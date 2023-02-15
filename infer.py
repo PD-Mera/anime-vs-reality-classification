@@ -5,7 +5,6 @@ from PIL import Image, ImageFont, ImageDraw
 from tqdm import tqdm
 
 from model import init_model
-from config import *
 from utils import parse_opt, load_cfg
 
 

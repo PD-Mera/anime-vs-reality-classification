@@ -51,7 +51,7 @@ def test(config):
             results = torch.argmax(output)
             prob = output[0][results]
             classname = config['class']['name'][results]
-            image = draw_to_image(image, classname + " - " + str(prob))
+            image = draw_to_image(image, f"{classname} - {prob * 100:.2f}%")
             image.save(os.path.join(config['test']['result_path'], imagelink))
         print(f"Image saved to {config['test']['result_path']}")
          

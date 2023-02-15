@@ -5,7 +5,7 @@ venv*/
 data/
 results/
 
-*confusion_matrix.jpg
+./*confusion_matrix.jpg
 
 *.zip
 *.pth

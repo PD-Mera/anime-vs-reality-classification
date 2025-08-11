@@ -46,7 +46,6 @@ def init_model(config):
         model = nn.Sequential(
             backbone,
             nn.Linear(1000, config['class']['num']),
-            nn.Softmax(dim=1)
         )
     
     if config['load_checkpoint'] is not None:
